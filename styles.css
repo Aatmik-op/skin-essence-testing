@@ -245,7 +245,7 @@ button {
 
 /* Layout Sections */
 section {
-    padding: 110px 0;
+    padding: 90px 0;
 }
 
 /* Header & Nav */
@@ -360,7 +360,7 @@ section {
 .hero {
     position: relative;
     background-color: var(--color-white);
-    padding: 100px 0 120px;
+    padding: 85px 0 100px;
     overflow: hidden;
 }
 
@@ -720,7 +720,7 @@ section {
 
 /* Booking CTA */
 .booking-section {
-    padding: 90px 0;
+    padding: 75px 0;
 }
 
 .booking-container {
@@ -741,12 +741,32 @@ section {
 /* Enhanced Footer */
 .footer {
     background-color: #0b1115;
-    color: #fff;
-    padding: 100px 0 0;
+    color: #e2e8f0;
+    padding: 80px 0 0;
+}
+
+.footer h3,
+.footer h4 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+}
+
+.footer h3 span {
+    color: var(--color-red);
+}
+
+.footer p {
+    color: #94a3b8;
+    line-height: 1.8;
+    margin-bottom: 16px;
 }
 
 .footer-grid {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Updates to Map Links */
