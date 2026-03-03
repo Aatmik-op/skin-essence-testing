@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Essence Clinic | Medical Dermatology & Aesthetics</title>
+    <meta name="description"
+        content="Medically supervised dermatology and skin treatment clinic in Arya Nagar, Kanpur offering comprehensive skin, hair, and aesthetic solutions under Dr. Sheena Pandey.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Using Montserrat for a highly professional, modern clinical look -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo" onclick="window.scrollTo(0,0)">
+                <!-- User's uploaded logo -->
+                <div class="logo-image-container">
+                    <!-- Add the real logo src here later. Currently defaults to text if image fails -->
+                    <img src="assets/logo.png" alt="Skin Essence Clinic Logo"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                        class="logo-img">
+                    <div style="display:none;" class="logo-text">
+                        <h1>Skin <span>Essence</span></h1>
+                        <p class="logo-subtext">Dermatology Clinic</p>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#services">Treatments</a></li>
+                    <li><a href="#doctor">Dr. Sheena Pandey</a></li>
+                    <li><a href="#experience">The Clinic</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="tel:+9193070222221" class="clinic-phone"><i class="fas fa-phone-alt"></i> +91 93070 22221</a>
+                <button onclick="openModal()" class="btn btn-primary">Book Consultation</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stronger Hero Section -->
+    <section class="hero" id="home">
+        <!-- Background soft ambient circle for depth -->
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-alt"></i> Medically Supervised Care
+                </div>
+                <h2 class="hero-title">Expert Skin & Hair Care in a Clinical Setting</h2>
+                <p class="hero-subtitle">Comprehensive Dermatology, Trichology, Aesthetic & Laser Treatments directed by
+                    <strong>Dr. Sheena Pandey</strong> in an organized, hygienic environment.
+                </p>
+
+                <div class="hero-cta-group">
+                    <button onclick="openModal()" class="btn btn-primary btn-large">Schedule Visit</button>
+                    <a href="#services" class="btn btn-secondary btn-large">Explore Treatments</a>
+                </div>
+
+                <!-- Proof made more prominent in hero -->
+                <div class="trust-badge-hero"
+                    onclick="document.getElementById('trust').scrollIntoView({behavior:'smooth'})">
+                    <div class="trust-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    </div>
+                    <div class="trust-text">
+                        <strong>3.6 Google Rating</strong>
+                        <span>Read our 53 verified patient reviews</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <!-- User's logo image showcased horizontally -->
+                <div class="visual-placeholder hero-logo-placeholder depth-layer">
+                    <img src="assets/logo.png" alt="Skin Essence Clinic Logo"
+                        onerror="this.parentElement.classList.add('no-image');">
+                    <span class="fallback-text">Skin Essence Clinic</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prominent Proof Section (Moved up, less clutter) -->
+    <section class="trust-section bg-beige" id="trust">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Patient Trust & Clinical Outcomes</h2>
+                <p class="section-subtitle">Real experiences demonstrating our dedication to procedure ethics and
+                    structured follow-ups.</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card depth-layer">
+                    <div class="stars prominent-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Dr. Sheena is extremely patient and thorough. The whole environment is very
+                        organized. Her follow-ups post-procedure really show her dedication."</p>
+                    <div class="reviewer">— Verified Patient</div>
+                </div>
+                <div class="review-card depth-layer">
+                    <div class="stars prominent-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Very calm and hygienic clinic. Fees are quite reasonable for the level of
+                        structured care provided. Highly recommend for any chronic skin issues."</p>
+                    <div class="reviewer">— Verified Patient</div>
+                </div>
+                <div class="review-card depth-layer">
+                    <div class="stars prominent-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Unlike commercial salons, this is a proper medical facility. The aesthetic
+                        treatments are done with such precision."</p>
+                    <div class="reviewer">— Verified Patient</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clean Services Cluster -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Medical Services</h2>
+                <p class="section-subtitle">Supervised treatments focused on Diagnosis, Management, and Lasting Results.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Dermatology -->
+                <div class="service-category depth-layer-hover">
+                    <div class="service-icon"><i class="fas fa-diagnoses"></i></div>
+                    <h3>Dermatology</h3>
+                    <ul class="service-list">
+                        <li>Skin disease diagnosis & treatment</li>
+                        <li>Chronic skin condition management</li>
+                        <li>General skin consultations</li>
+                    </ul>
+                </div>
+
+                <!-- Trichology -->
+                <div class="service-category depth-layer-hover">
+                    <div class="service-icon"><i class="fas fa-dna"></i></div>
+                    <h3>Trichology</h3>
+                    <ul class="service-list">
+                        <li>Hair and scalp treatments</li>
+                        <li>Hair-related disorder management</li>
+                    </ul>
+                </div>
+
+                <!-- Aesthetic & Laser -->
+                <div class="service-category highlight-category depth-layer-soft">
+                    <div class="service-icon"><i class="fas fa-magic"></i></div>
+                    <h3>Aesthetic & Laser</h3>
+                    <ul class="service-list">
+                        <li>Advanced Laser procedures</li>
+                        <li>Clinical aesthetic treatments</li>
+                        <li>Procedure-based skin improvements</li>
+                        <li class="hl-text text-strong"><i class="fas fa-check-circle"></i> Structured follow-up care
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-xl">
+                <button onclick="openModal()" class="btn btn-primary btn-large">Book a Procedure</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hierarchy & Focus: Doctor Profile -->
+    <section class="doctor-section bg-beige" id="doctor">
+        <div class="container doctor-container">
+            <div class="doctor-visual">
+                <!-- User's doctor profile image -->
+                <div class="visual-placeholder headshot-placeholder depth-layer">
+                    <img src="assets/doctor.jpg" alt="Dr. Sheena Pandey"
+                        onerror="this.parentElement.classList.add('no-image');">
+                    <span class="fallback-text">Dr. Sheena Pandey</span>
+                </div>
+            </div>
+            <div class="doctor-content">
+                <h2 class="section-title">Dr. Sheena Pandey</h2>
+                <h3 class="qualifications">Dermatologist, Trichologist, Aesthetic & Laser Physician</h3>
+                <p class="doctor-bio">With a robust foundation in clinical dermatology, Dr. Sheena Pandey leads Skin
+                    Essence with a medical-first approach. Her practice is built on precise diagnoses, evidence-based
+                    treatments, and building deep patient trust rather than promotional promises.</p>
+                <div class="authority-points">
+                    <div class="point depth-layer-hover">
+                        <i class="fas fa-user-md"></i>
+                        <span>Medically Supervised Practice</span>
+                    </div>
+                    <div class="point depth-layer-hover">
+                        <i class="fas fa-clipboard-check"></i>
+                        <span>Structured Follow-up Protocol</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinic Experience (Reduced clutter, removed unnecessary text) -->
+    <section class="infrastructure-section" id="experience">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Clinical Infrastructure</h2>
+                <p class="section-subtitle">A minimal, calm environment designed for optimal patient comfort.</p>
+            </div>
+            <div class="infra-grid">
+                <div class="infra-item full-width-item">
+                    <div class="visual-placeholder depth-layer"
+                        style="height: 500px; width: 100%; border-radius: var(--border-radius-lg); margin-bottom: 24px;">
+                        <img src="assets/waiting_area.jpg" alt="Hygienic Waiting Area"
+                            onerror="this.parentElement.classList.add('no-image');">
+                    </div>
+                    <h4>Hygienic Waiting Area</h4>
+                </div>
+                <div class="infra-item full-width-item">
+                    <div class="visual-placeholder depth-layer"
+                        style="height: 300px; border-radius: var(--border-radius-lg); margin-bottom: 24px;">
+                        <img src="assets/reception.jpg" alt="Reception Desk"
+                            onerror="this.parentElement.classList.add('no-image');">
+                    </div>
+                    <h4>Dedicated Reception</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA & Location -->
+    <section class="booking-section bg-red" id="booking">
+        <div class="container booking-container">
+            <div class="booking-content">
+                <h2 class="text-white">Begin Your Treatment Journey</h2>
+                <p class="text-white fade-text">Schedule your structured consultation at our Arya Nagar clinic.</p>
+            </div>
+            <div class="booking-actions">
+                <a href="tel:+9193070222221" class="btn btn-white btn-large"><i class="fas fa-phone-alt"></i> Call
+                    Clinic</a>
+                <button onclick="openModal()" class="btn btn-outline-white btn-large">Book Appointment</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>Skin <span>Essence</span></h3>
+                <p>A dedicated medical practice for Dermatology, Trichology, Aesthetic & Laser Treatments.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Visit Us</h4>
+                <!-- Professional Maps Link -->
+                <p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Skin+Essence+8/218+Arya+Nagar+Road+Khalasi+Line+Arya+Nagar+Kanpur+208002"
+                        target="_blank" rel="noopener noreferrer" class="map-link">
+                        <i class="fas fa-map-marker-alt"></i> Arya Nagar, Kanpur, UP
+                    </a>
+                </p>
+                <p><a href="tel:+9193070222221"><i class="fas fa-phone"></i> +91 93070 22221</a></p>
+                <p><i class="fas fa-clock"></i> Prior appointment recommended</p>
+            </div>
+            <div class="footer-links">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Treatments</a></li>
+                    <li><a href="#doctor">Dr. Sheena Pandey</a></li>
+                    <li><a href="#trust">Patient Reviews</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Skin Essence Clinic. All Rights Reserved. Medical consultation required prior to
+                    treatments.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal (Functional UI) -->
+    <div id="booking-modal" class="modal-overlay">
+        <div class="modal-content depth-layer">
+            <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h3>Request an Appointment</h3>
+                <p>Fill out the form below or call <a href="tel:+9193070222221" style="font-weight:600;">93070222221</a>
+                </p>
+            </div>
+            <form onsubmit="event.preventDefault(); submitForm();" class="booking-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required placeholder="10-digit mobile number">
+                </div>
+                <div class="form-group">
+                    <label for="service">Interested Service</label>
+                    <select id="service" required>
+                        <option value="">Select a treatment area...</option>
+                        <option value="dermatology">Dermatology (Skin Issues)</option>
+                        <option value="trichology">Trichology (Hair/Scalp)</option>
+                        <option value="aesthetic">Aesthetic & Laser</option>
+                        <option value="general">General Consultation</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Submit Request</button>
+            </form>
+            <div id="form-success" class="form-success hidden">
+                <i class="fas fa-check-circle"></i>
+                <h4>Request Sent</h4>
+                <p>Our clinic coordinator will call you shortly to confirm your slot.</p>
+                <button onclick="closeModal()" class="btn btn-secondary mt-sm">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts for Functionality -->
+    <script>
+        const modal = document.getElementById('booking-modal');
+        const form = document.querySelector('.booking-form');
+        const successMsg = document.getElementById('form-success');
+
+        function openModal() {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scroll
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+
+            // Reset form gracefully after close animation
+            setTimeout(() => {
+                form.reset();
+                form.style.display = 'block';
+                successMsg.classList.add('hidden');
+            }, 300);
+        }
+
+        // Close on outside click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        // Mock form submission
+        function submitForm() {
+            form.style.display = 'none';
+            successMsg.classList.remove('hidden');
+        }
+    </script>
+
+</body>
+
+</html>
