@@ -45,7 +45,9 @@
             </nav>
 
             <div class="nav-actions">
-                <a href="tel:+9193070222221" class="clinic-phone"><i class="fas fa-phone-alt"></i> +91 93070 22221</a>
+                <a href="tel:+919307022221" class="clinic-phone icon-only" aria-label="Call Clinic">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
                 <button onclick="openModal()" class="btn btn-primary">Book Consultation</button>
             </div>
         </div>
@@ -254,7 +256,7 @@
                 <p class="text-white fade-text">Schedule your structured consultation at our Arya Nagar clinic.</p>
             </div>
             <div class="booking-actions">
-                <a href="tel:+9193070222221" class="btn btn-white btn-large"><i class="fas fa-phone-alt"></i> Call
+                <a href="tel:+919307022221" class="btn btn-white btn-large"><i class="fas fa-phone-alt"></i> Call
                     Clinic</a>
                 <button onclick="openModal()" class="btn btn-outline-white btn-large">Book Appointment</button>
             </div>
@@ -277,7 +279,7 @@
                         <i class="fas fa-map-marker-alt"></i> Arya Nagar, Kanpur, UP
                     </a>
                 </p>
-                <p><a href="tel:+9193070222221"><i class="fas fa-phone"></i> +91 93070 22221</a></p>
+                <p><a href="tel:+919307022221"><i class="fas fa-phone"></i> +91 93070 22221</a></p>
                 <p><i class="fas fa-clock"></i> Prior appointment recommended</p>
             </div>
             <div class="footer-links">
@@ -304,7 +306,7 @@
             <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
             <div class="modal-header">
                 <h3>Request an Appointment</h3>
-                <p>Fill out the form below or call <a href="tel:+9193070222221" style="font-weight:600;">93070222221</a>
+                <p>Fill out the form below or call <a href="tel:+919307022221" style="font-weight:600;">93070 22221</a>
                 </p>
             </div>
             <form onsubmit="event.preventDefault(); submitForm();" class="booking-form">
@@ -332,7 +334,7 @@
     </div>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://api.whatsapp.com/send?phone=918604953116&text=Hello%20Skin%20Essence,%20I%20would%20like%20to%20book%20an%20appointment."
+    <a href="https://api.whatsapp.com/send?phone=919307022221&text=Hello%20Skin%20Essence,%20I%20would%20like%20to%20book%20an%20appointment."
         class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -371,7 +373,7 @@
             const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
 
             const message = `Hello Skin Essence,\n\nI would like to book an appointment.\n\nName: ${name}\nPhone: ${phone}\nService: ${serviceText}`;
-            const whatsappUrl = `https://api.whatsapp.com/send?phone=918604953116&text=${encodeURIComponent(message)}`;
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=919307022221&text=${encodeURIComponent(message)}`;
 
             window.open(whatsappUrl, '_blank');
             closeModal();
