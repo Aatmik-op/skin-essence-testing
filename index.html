@@ -328,20 +328,19 @@
                 </div>
                 <button type="submit" class="btn btn-primary btn-full">Submit Request</button>
             </form>
-            <div id="form-success" class="form-success hidden">
-                <i class="fas fa-check-circle"></i>
-                <h4>Request Sent</h4>
-                <p>Our clinic coordinator will call you shortly to confirm your slot.</p>
-                <button onclick="closeModal()" class="btn btn-secondary mt-sm">Close</button>
-            </div>
         </div>
     </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://api.whatsapp.com/send?phone=918604953116&text=Hello%20Skin%20Essence,%20I%20would%20like%20to%20book%20an%20appointment."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Scripts for Functionality -->
     <script>
         const modal = document.getElementById('booking-modal');
         const form = document.querySelector('.booking-form');
-        const successMsg = document.getElementById('form-success');
 
         function openModal() {
             modal.classList.add('active');
@@ -356,7 +355,6 @@
             setTimeout(() => {
                 form.reset();
                 form.style.display = 'block';
-                successMsg.classList.add('hidden');
             }, 300);
         }
 
@@ -365,10 +363,18 @@
             if (e.target === modal) closeModal();
         });
 
-        // Mock form submission
+        // WhatsApp form submission
         function submitForm() {
-            form.style.display = 'none';
-            successMsg.classList.remove('hidden');
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const serviceSelect = document.getElementById('service');
+            const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+
+            const message = `Hello Skin Essence,\n\nI would like to book an appointment.\n\nName: ${name}\nPhone: ${phone}\nService: ${serviceText}`;
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=918604953116&text=${encodeURIComponent(message)}`;
+
+            window.open(whatsappUrl, '_blank');
+            closeModal();
         }
     </script>
 

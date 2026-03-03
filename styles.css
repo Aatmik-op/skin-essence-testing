@@ -864,6 +864,33 @@ section {
 }
 
 
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 32px;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+    z-index: 9990;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #20b858;
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .nav-actions {
@@ -943,6 +970,14 @@ section {
     .trust-badge-hero {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 26px;
     }
 
     section {
