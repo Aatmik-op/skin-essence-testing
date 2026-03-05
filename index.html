@@ -87,9 +87,9 @@
             </div>
 
             <div class="hero-visual">
-                <!-- User's logo image showcased horizontally -->
-                <div class="visual-placeholder hero-logo-placeholder depth-layer">
-                    <img src="assets/logo.png" alt="Skin Essence Clinic Logo"
+                <!-- High Quality Clinic Interior Hero Image -->
+                <div class="visual-placeholder hero-interior-image depth-layer">
+                    <img src="assets/logo-new.png" alt="Skin Essence Clinic Interior"
                         onerror="this.parentElement.classList.add('no-image');">
                     <span class="fallback-text">Skin Essence Clinic</span>
                 </div>
@@ -195,7 +195,7 @@
             <div class="doctor-visual">
                 <!-- User's doctor profile image -->
                 <div class="visual-placeholder headshot-placeholder depth-layer">
-                    <img src="assets/doctor.jpg" alt="Dr. Sheena Pandey"
+                    <img src="assets/doctor-new.png" alt="Dr. Sheena Pandey"
                         onerror="this.parentElement.classList.add('no-image');">
                     <span class="fallback-text">Dr. Sheena Pandey</span>
                 </div>
@@ -231,15 +231,16 @@
                 <div class="infra-item full-width-item">
                     <div class="visual-placeholder depth-layer"
                         style="height: 500px; width: 100%; border-radius: var(--border-radius-lg); margin-bottom: 24px;">
-                        <img src="assets/waiting_area.jpg" alt="Hygienic Waiting Area"
+                        <img src="assets/waiting_area-new.png" alt="Hygienic Waiting Area"
                             onerror="this.parentElement.classList.add('no-image');">
                     </div>
                     <h4>Hygienic Waiting Area</h4>
                 </div>
                 <div class="infra-item full-width-item">
                     <div class="visual-placeholder depth-layer"
-                        style="height: 300px; border-radius: var(--border-radius-lg); margin-bottom: 24px;">
-                        <img src="assets/reception.jpg" alt="Reception Desk"
+                        style="height: auto; width: 100%; border-radius: var(--border-radius-lg); margin-bottom: 24px;">
+                        <img src="assets/reception-new.png?v=2" alt="Reception Desk"
+                            style="width: 100%; height: auto; object-fit: cover;"
                             onerror="this.parentElement.classList.add('no-image');">
                     </div>
                     <h4>Dedicated Reception</h4>
@@ -277,7 +278,8 @@
                     <p>
                         <a href="https://www.google.com/maps/search/?api=1&query=Skin+Essence+8/218+Arya+Nagar+Road+Khalasi+Line+Arya+Nagar+Kanpur+208002"
                             target="_blank" rel="noopener noreferrer" class="map-link">
-                            <i class="fas fa-map-marker-alt"></i> Arya Nagar, Kanpur, UP
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>Skin Essence Clinic</strong>, Arya Nagar, Kanpur, Uttar Pradesh, India</span>
                         </a>
                     </p>
                     <p><a href="tel:+919307022221"><i class="fas fa-phone"></i> +91 93070 22221</a></p>
@@ -381,6 +383,31 @@
             window.open(whatsappUrl, '_blank');
             closeModal();
         }
+
+        // Dynamic Navigation Active State
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.desktop-nav a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    // Adjust threshold based on header height
+                    if (scrollY >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
     </script>
 
 </body>
